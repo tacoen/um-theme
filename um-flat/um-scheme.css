@@ -1,0 +1,81 @@
+.um-title	{ color: #2D3E50/*um-title*/ }
+
+i.dashicons,
+.um-text	{ color: #5D6D7D/*um-text*/ }
+
+.site-branding *,
+.site-footer a,
+.um-page	{ color: #fcfcfc/*um-page*/ }
+
+.um-line	{ color: #95a5a6/*um-line*/ }
+.um-link 	{ color: #111111/*um-link*/ }
+
+.comment-form span.required,
+.um-hot		{ color: #C54134/*um-hot*/ }
+
+.um-confirm	{ color: #16a086/*um-confirm*/ }
+.um-cool	{ color: #5DADE2/*um-cool*/ }
+.um-prompt	{ color: #F39C11/*um-prompt*/ }
+
+#submit,input.submit_button,
+.um-prompt-button	{ background-color: #F39C11/*um-prompt*/ }
+.um-cool-button	 { background-color: #5DADE2/*um-cool*/ }
+.um-hot-button		{ background-color: #C54134/*um-hot*/ }
+.um-confirm-button	{ background-color: #16a086/*um-confirm*/ }
+
+.site-footer { 
+background: #F39C11/*um-prompt*/;
+color: #fcfcfc/*um-page*/
+}
+
+.site-header { background-color: #16a086/*um-confirm*/; margin-bottom: 1.5em; }
+#um-panel { background-color: #2D3E50/*um-title*/; }
+
+a { color: #111111/*um-link*/ }
+
+.entry-content a,
+.comment-content a { color: #5DADE2/*um-cool*/; opacity: 1 }
+
+footer .entry-meta { font-size: .9em }
+
+abbr,acronym { border-bottom: 1px dotted #95a5a6/*um-line*/; }
+label { color: #2D3E50/*um-title*/; font-weight: 700; }
+hr { background-color: #95a5a6/*um-line*/ }
+
+
+article h1 a, article h2 a, article h3 a, article h4 a, article h5 a { 
+font-weight: 700; text-decoration: none; color: #2D3E50/*um-title*/ 
+}
+
+article pre {
+background-color: #111111/*um-link*/;
+opacity: .7;
+color: #fcfcfc/*um-page*/
+}
+
+aside h1 { 
+color: #C54134/*um-hot*/; 
+font-weight: 700; font-size: 1.2em;
+border-bottom: 1px solid #95a5a6/*um-line*/;
+}
+
+nav.main-navigation { font-size: .85em; }
+nav.main-navigation a { width: 160px; }
+nav.main-navigation ul ul,
+nav.main-navigation { background-color: #111111/*um-link*/ }
+nav.main-navigation a { padding: 1em .5em 1em 10px; color: #fcfcfc/*um-page*/;   margin: 0}
+nav.main-navigation li a:hover  { background: rgba(255,255,255,.3); }
+
+nav.main-navigation .current_page_item > a,
+nav.main-navigation .current-menu-item > a {
+margin: .5em 0;
+padding: .5em .5em .5em 5px; border-left: 5px solid #5DADE2/*um-cool**/ ;
+}
+
+#um-crumbs * { color: #fcfcfc/*um-page*/; }
+
+body { background-color: #fcfcfc/*um-page*/; color: #5D6D7D/*um-text*/ }
+ 
+.entry-meta i.dashicons{ color: #95a5a6/*um-line*/ }
+
+.taxonomy-description { padding: 1em 0; border-bottom: 1px dotted #95a5a6/*um-line*/;  color: #111111/*um-link*/; margin-bottom: 1em}

@@ -1,0 +1,18 @@
+/*
+Theme Name: UM
+Theme URI: http://tacoen.github.io/UndressMe
+Author: tacoen
+Author URI: http://tacoen.github.com
+Description: UM Core Theme. This theme and it's child theme require UM-Plug Plugins.
+Version: 1.0.0
+License: GNU General Public License
+License URI: license.txt
+Text Domain: um
+Tags: white, theme-options, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+*/
+
+
+body { font-family: "Open Sans",arial,sans-serif; }
+#secondary li { margin: .5em 0; }
+.site-branding { margin: 1em 0 }
+.site-footer { font-size: .8em }
