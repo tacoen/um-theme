@@ -54,8 +54,7 @@ border-bottom: 1px solid rgba(0,0,0,.5); padding: .5em;  color: rgba(255,255,255
 
 
 footer.entry-meta .d { float: left; width: 40%; margin: 0 3% .5em 0; text-indent: -1.5em; padding-left: 1.5em; }
-.page footer.entry-meta ,
-.single footer.entry-meta { display:table; clear: both; width: 100%; margin-bottom: 1.5em }
+
 
 .site-branding .site-description { font-size: 2em; }
 
@@ -67,29 +66,3 @@ footer.entry-meta .d { float: left; width: 40%; margin: 0 3% .5em 0; text-indent
 button,.comment-list div.reply a,input[type='button'],input[type='reset'],input[type='submit']{border:1px solid #ccc;text-decoration:none;border-color:#ccc #ccc #bbb #ccc;border-radius:3px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.3),inset 0 15px 17px rgba(255,255,255,0.3),inset 0 -5px 12px rgba(0,0,0,0.05);color:rgba(0,0,0,.8);cursor:pointer;-webkit-appearance:button;font-size:1rem;line-height:1;padding:.4em .8em .4em .8em;text-shadow:0 1px 0 rgba(255,255,255,0.8)}
 .comment-list div.reply a:hover,button:hover,input[type='button']:hover,input[type='reset']:hover,input[type='submit']:hover{border-color:#ccc #bbb #aaa #bbb;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8),inset 0 15px 17px rgba(255,255,255,0.8),inset 0 -5px 12px rgba(0,0,0,0.02)}
 article div.reply a:focus,button:focus,input[type='button']:focus,input[type='reset']:focus,input[type='submit']:focus,button:active,input[type='button']:active,input[type='reset']:active,input[type='submit']:active{border-color:#aaa #bbb #bbb #bbb;box-shadow:inset 0 -1px 0 rgba(255,255,255,0.5),inset 0 2px 5px rgba(0,0,0,0.15)}
-
-.site-info,.navigation,.entry-meta{font-size:.8em}
-
-.comments-area ol.children{margin-left:48px}
-.comment-content{margin-left:48px}
-.comment-author img.photo{float:left;display:block;width:32px;height:32px;top:0;left:0;margin:0 16px 1em 0}
-.comment-list>li,.comment-list .children>li,.comment-list li{list-style-type:none}
-.comment-list article{padding:8px;margin:.5em 0;border:1px solid rgba(0,0,0,.05);position:relative;border-radius:3px}
-.comment-list div.reply{position:absolute;top:8px;left:100%;width:60px;margin-left:-68px}
-.comment-list div.reply a{text-align:center;border-radius:3px;line-height:20px;font-size:14px;display:block}
-.comment-form p.half{float:left;width:47%;padding-right:3%}
-.comment-form p.fill{clear:both;display:table;float:none;width:100%}
-.comment-form p.half input,.comment-form p.half textarea{width:100%}
-.comment-form p.fill input,.comment-form p.fill textarea{width:97%}
-.comment-reply-title small{float:right;margin-right:3%}
-.page h1.entry-title,.single h1.entry-title,.archive h1.page-title{font-size:2em;line-height:1em}
-.single div.entry-meta,.page div.entry-meta{border-top:1px solid #ccc;margin:.5em 0;padding-top:.3em}
-.archive h1.page-title{border-bottom:1px solid #ccc;padding-bottom:.5em;margin-bottom:.3em}
-.home article:not(.sticky),.archive article:not(.sticky){border-bottom:1px solid #ccc;padding-bottom:1em;margin-bottom:1.5em}
-article.sticky{border:1px solid #ccc;padding:.5em 1em; margin-bottom: 1.5em}
-.home h1.entry-title,.archive h1.entry-title{font-size:1.5em}
-.wp-caption-text{font-size:.85em}
-span.edit-link{float:right}
-
-footer { margin-top: 1em; }
-

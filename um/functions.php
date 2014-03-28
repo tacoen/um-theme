@@ -5,69 +5,37 @@
  * @package um
  */
 
-/**
- * Set the content width based on the theme's design and stylesheet.
- */
+DEFINE('UMCORE_DIR', get_template_directory() );
+DEFINE('UMCORE_URL', get_template_directory_uri() );
+
+$cssrd_php = UMCORE_DIR."/css/um-reset.php";
+$cssrd_dis = UMCORE_DIR."/css/um-reset.---";
+
+// check um-plug
+
+if ((!is_admin()) && (!function_exists(um_tool_which))) {
+	die('This Theme require um_plug plugins');
+}
+
+// for um-reset.php
+
+if (um_getoption('cssrd')) {
+	if (!file_exists($cssrd_php)) { rename($cssrd_dis, $cssrd_php); }
+} else {
+	if (!file_exists($cssrd_dis)) { rename($cssrd_php, $cssrd_dis); }
+}
+
+
 if(! isset($content_width)){
 	$content_width = 640; /* pixels */
 }
 
-if(! function_exists('um_setup')):
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
-function um_setup(){
-
-	/*
-	* Make theme available for translation.
-	* Translations can be filed in the /languages/ directory.
-	* If you're building a theme based on um, use a find and replace
-	* to change 'um' to the name of your theme in all the template files
-	*/
-	load_theme_textdomain('um', get_template_directory(). '/languages');
-
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support('automatic-feed-links');
-
-	/*
-	* Enable support for Post Thumbnails on posts and pages.
-	*
-	* @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-	*/
-	add_theme_support('post-thumbnails');
-
-	// This theme uses wp_nav_menu()in one location.
-	register_nav_menus(array(
-		'primary' => __('Primary Menu', 'um'),
-	));
-
-	// Enable support for Post Formats.
-	add_theme_support('post-formats', array('aside', 'image', 'video', 'quote', 'link','gallery'));
-
-	// Setup the WordPress core custom background feature.
-	add_theme_support('custom-background', apply_filters('um_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	)));
-
-	// Enable support for HTML5 markup.
-	add_theme_support('html5', array(
-		'comment-list',
-		'search-form',
-		'comment-form',
-		'gallery',
-	));
+function um_iehtml5() {
+	$output = '<!--[if lte IE 9]><link rel="stylesheet" href="' . UMCORE_URL . '/css/ie9.css" /><![endif]-->'."\n";
+	$output .= '<!--[if lte IE 8]><script src="' . UMCORE_URL . '/js/html5shiv.js"></script><![endif]-->'."\n";
+	echo $output;
 }
-endif; // um_setup
-add_action('after_setup_theme', 'um_setup');
 
-/**
- * Register widgetized area and update sidebar with default widgets.
- */
 function um_widgets_init(){
 	register_sidebar(array(
 		'name' => __('Sidebar', 'um'),
@@ -80,27 +48,17 @@ function um_widgets_init(){
 }
 add_action('widgets_init', 'um_widgets_init');
 
-/**
- * Implement the Custom Header feature. -- better on child
- */
-//require get_template_directory(). '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
+require get_template_directory(). '/inc/theme-setup.php';
+require get_template_directory(). '/inc/commenting.php';
 require get_template_directory(). '/inc/template-tags.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
 require get_template_directory(). '/inc/extras.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory(). '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
 require get_template_directory(). '/inc/jetpack.php';
+require get_template_directory(). '/inc/options.php';
+//require get_template_directory(). '/inc/custom-header.php';
+require get_template_directory(). '/inc/customizer.php';
+require get_template_directory().'/inc/customizer-scheme.php';
+
+
+if (um_get_themeoption('ajaxwpl')) {
+	require get_template_directory() . '/inc/ajax-wplogin.php';
+}

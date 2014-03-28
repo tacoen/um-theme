@@ -1,0 +1,24 @@
+/*
+Theme Name: undress
+Layout: Sidebar-Content
+*/
+
+.site { }
+.site-header { clear: both; width: 100%; }
+.site-content { width: 98%; margin: 0 auto; }
+.site-content .site-side { float: left; width: 20%; overflow:hidden; }
+.site-content .site-main { float: right; width: 75%; overflow:hidden; }
+.site-footer { clear: both; width: 100%; }
+#um-top { }
+
+@media screen and (max-width: 600px) {
+
+	.site { }
+	.site-header { }
+	.site-content { }
+	.site-content .site-main { }
+	.site-content .site-side { }
+	.site-footer { }
+	#um-top { }
+
+}

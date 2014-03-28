@@ -11,11 +11,14 @@ function breadcrumb() { um_breadcrumb_script();  }
 function um_breadcrumb_script() {
 
 	echo '<ul id="um-crumbs">';
-		if (!is_home()) {
 				echo '<li><a href="';
 				echo  home_url();
 				echo '">';
-				echo 'Home';
+				if (!is_home()) {
+					echo 'Home';
+				} else {
+					echo 'Welcome';
+				}
 				echo "</a></li>";
 				if (is_category() || is_single()) {
 						echo '<li>';
@@ -30,7 +33,6 @@ function um_breadcrumb_script() {
 						echo the_title();
 						echo '</li>';
 				}
-		}
 		elseif (is_tag()) {single_tag_title();}
 		elseif (is_day()) {echo"<li>Archive for "; the_time('F jS, Y'); echo'</li>';}
 		elseif (is_month()) {echo"<li>Archive for "; the_time('F, Y'); echo'</li>';}
