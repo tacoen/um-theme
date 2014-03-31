@@ -10,6 +10,8 @@ function umt_args() {
 				'layout'=> array ('selectfile','Layout','Layout Selections',get_stylesheet_directory()."/layouts"),
 				'schcss'=> array ('check','UM-scheme.css','Load customable colour schemes',''),
 				'navcss'=> array ('check','UM-navui.css','Load main-navigation menu styles',''),
+				'iehtml5'=> array ('check','IE html5','Include html5 hack for IE9 and IE8',''),
+				
 			)
 		),
 		'featjs'=> array(

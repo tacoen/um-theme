@@ -13,8 +13,8 @@ $cssrd_dis = UMCORE_DIR."/css/um-reset.---";
 
 // check um-plug
 
-if ((!is_admin()) && (!function_exists(um_tool_which))) {
-	die('This Theme require um_plug plugins');
+if ((!is_admin()) && (!function_exists('um_tool_which'))) {
+	die("This Theme require active <a href='http://wordpress.org/plugins/um-plug/'>um_plug plugins</a>.");
 }
 
 // for um-reset.php
@@ -48,17 +48,17 @@ function um_widgets_init(){
 }
 add_action('widgets_init', 'um_widgets_init');
 
-require get_template_directory(). '/inc/theme-setup.php';
-require get_template_directory(). '/inc/commenting.php';
-require get_template_directory(). '/inc/template-tags.php';
-require get_template_directory(). '/inc/extras.php';
-require get_template_directory(). '/inc/jetpack.php';
-require get_template_directory(). '/inc/options.php';
-//require get_template_directory(). '/inc/custom-header.php';
-require get_template_directory(). '/inc/customizer.php';
-require get_template_directory().'/inc/customizer-scheme.php';
+require get_template_directory(). '/inc/um/theme-setup.php';
+require get_template_directory(). '/inc/um/commenting.php';
+require get_template_directory(). '/inc/um/template-tags.php';
+require get_template_directory(). '/inc/um/extras.php';
+require get_template_directory(). '/inc/um/jetpack.php';
+require get_template_directory(). '/inc/um/options.php';
+//require get_template_directory(). '/inc/um/custom-header.php';
+require get_template_directory(). '/inc/um/customizer.php';
+require get_template_directory().'/inc/um/customizer-scheme.php';
 
 
 if (um_get_themeoption('ajaxwpl')) {
-	require get_template_directory() . '/inc/ajax-wplogin.php';
+	require get_template_directory() . '/inc/um/ajax-wplogin.php';
 }

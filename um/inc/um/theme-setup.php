@@ -1,4 +1,12 @@
 <?php
+if(! function_exists('um_editor_styles')) {
+
+	add_action( 'init', 'um_editor_styles' );
+	function um_editor_styles() {
+		add_editor_style( get_stylesheet_uri()."/css/editor.style.css" );
+	}
+
+}
 
 function um_theme_register_styles() {
 
@@ -63,9 +71,12 @@ function um_theme_register_styles() {
 }
 
 function um_theme_register_scripts() {
-	
-	if (um_get_themeoption('skejs')) {
+
+	if (um_get_themeoption('iehtml5')) {
 		add_action('wp_head','um_iehtml5');
+	}
+
+	if (um_get_themeoption('skejs')) {
 		wp_enqueue_script('um-skel-init',um_tool_which('skel-init.js'),array('jquery'),um_ver(),false);
 		wp_enqueue_script('um-skel-lib',UMCORE_URL . '/js/skel.min.js',array('um-skel-init'),um_ver(),true);
 	}
@@ -95,7 +106,7 @@ function um_setup(){
 	add_action('wp_enqueue_scripts','um_theme_register_scripts');
 	add_action('wp_enqueue_scripts','um_theme_register_styles');
 
-	load_theme_textdomain('um', get_template_directory(). '/languages');
+	load_theme_textdomain('um', get_template_directory(). '/lang');
 	add_theme_support('automatic-feed-links');
 	
 	add_theme_support('post-thumbnails');

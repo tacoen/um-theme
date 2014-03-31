@@ -1,0 +1,1 @@
+to hide functions php from wp-editor, we move everything to 'um/'

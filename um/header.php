@@ -4,10 +4,11 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package undress
+ * <html lang="en-US">
  */
 ?><!DOCTYPE html>
-<html lang="en-US">
+
+<html <?php language_attributes(); ?>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
