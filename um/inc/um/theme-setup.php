@@ -2,6 +2,7 @@
 if(! function_exists('um_editor_styles')) {
 
 	add_action( 'init', 'um_editor_styles' );
+	
 	function um_editor_styles() {
 		add_editor_style( get_stylesheet_uri()."/css/editor.style.css" );
 	}
@@ -10,16 +11,24 @@ if(! function_exists('um_editor_styles')) {
 
 function um_core_ver() { return "0.0.3"; }
 
+function um_css_reset() {
+		wp_enqueue_style('um-reset',UMCORE_URL. '/css/build/necolas-normalize.css' ,false,time(),'all'); 
+		wp_enqueue_style('um-reset-ui',UMCORE_URL. '/css/build/um-reset-ui.css' ,array('um-reset'),time(),'all'); 
+		wp_enqueue_style('um-reset-wp',UMCORE_URL. '/css/build/wp-reset.css' ,array('um-reset'),time(),'all'); 
+		// Still pre-production: um-reset.css
+		wp_enqueue_style('um-reset-docs',UMCORE_URL. '/css/um-reset.php' ,array('um-reset'),time(),'all'); 
+}
+
 function um_theme_register_styles() {
 
 	$dep = array();
 	$css_static = array();
-
+	
 	if ((file_exists(get_stylesheet_directory()."/static.css")) && (um_getoption('cssstatic'))) {
 		if (um_getoption('cssrd')) {
 			$dep = array('um-reset');
 			if (file_exists(UMCORE_DIR."/css/um-reset.php")) { 
-				wp_enqueue_style('um-reset',UMCORE_URL. '/css/um-reset.php' ,false,time(),'all'); 
+				um_css_reset();
 			}
 		}
 		
@@ -32,7 +41,7 @@ function um_theme_register_styles() {
 			$dep = array('um-reset');
 			if (um_getoption('cssrd')) {
 				if (file_exists(UMCORE_DIR."/css/um-reset.php")) { 
-					wp_enqueue_style('um-reset',UMCORE_URL. '/css/um-reset.php' ,false,time(),'all'); 
+					um_css_reset();
 				}
 			} else {
 				array_push($css_static,UMCORE_URL. '/css/um-reset.css');
@@ -66,9 +75,10 @@ function um_theme_register_styles() {
 			wp_enqueue_style(get_template().'-layout', get_stylesheet_directory_uri()."/layouts/$layout", array(get_template().'-style'),um_core_ver(),'all'); 
 		}
 
-		if (function_exists(um_makestatic) ) { um_makestatic($css_static);	}
-
+	if ( function_exists('um_makestatic') ) { um_makestatic($css_static); }
+	
 	}
+
 }
 
 function um_theme_register_scripts() {
