@@ -1,24 +1,29 @@
 /*
-Theme Name: undress
+Theme Name: um
 Layout: Content-Sidebar
 */
 
-.site { width: 98%; margin: 0 auto; }
+.site { }
+.site-header { clear: both; width: 100%; }
+.site-content { width: 98%; margin: 0 auto; }
+.site-content .site-side { float: right; width: 20%; overflow:hidden; }
+.site-content .site-main { float: left; width: 75%; overflow:hidden; }
+.site-footer { clear: both; width: 100%; }
+#um-top { width: 100%; }
 
-.content-area {
-	float: left;
-	margin: 0 -25% 0 0;
-	width: 100%;
-}
-.site-main {
-	margin: 0 27% 0 0;
-}
-.site-content .widget-area {
-	float: right;
-	overflow: hidden;
-	width: 25%;
-}
-.site-footer {
-	clear: both;
-	width: 100%;
+@media screen and (max-width: 640px) {
+
+	.site { }
+	.site-header { }
+	.site-content { width: 100%; }
+	.site-content .site-main { float:none; width: 100%; font-size: 80%; }
+	.site-content .site-side { float:none; width: 98%; margin: 1%; }
+	.site-footer { }
+	#um-top { }
+
+	#colophon { padding: 24px 0; width: 100%; background: rgba(0,0,0,0.03) }
+	#masthead { padding: 24px 0 24px 0; width: 100%; background: rgba(0,0,0,0.03) }
+	
+	.entry-content { font-size: 12px; line-height: 16px; }
+
 }

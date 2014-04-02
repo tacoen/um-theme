@@ -38,7 +38,7 @@ class um_as_theme {
 		add_action('admin_init',array($this,'um_page_init'));
 	}
 	public function um_add_menu_slug() {
-		add_theme_page('UM Theme Options','UM Theme Options','edit_theme_options','um-theme-options',array($this,'um_themeoption'));
+		add_theme_page( 'UM Theme Options', 'UM Theme Options', 'edit_theme_options', 'um-theme-options',array($this,'um_themeoption'));
 	}
 
 	public function um_themeoption() {

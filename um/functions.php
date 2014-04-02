@@ -11,11 +11,34 @@ DEFINE('UMCORE_URL', get_template_directory_uri() );
 $cssrd_php = UMCORE_DIR."/css/um-reset.php";
 $cssrd_dis = UMCORE_DIR."/css/um-reset.---";
 
-// check um-plug
+function um_check_umplug() {
+	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+	if(!is_plugin_active( 'um-plug/um-plug.php' )) {
+		add_action('admin_notices','um_adminnotes');
+		add_action('wp_head','um_suggest_umplug');
+	}
 
-if ((!is_admin()) && (!function_exists('um_tool_which'))) {
-	die("This Theme require active <a href='http://wordpress.org/plugins/um-plug/'>um_plug plugins</a>.");
+	include_once UMCORE_DIR."/inc/um/um-compat.php"; 
 }
+
+function um_adminnotes() {
+	echo '<div id="message" class="error">';
+	echo "<p>The UM-themes requires <a href='". admin_url()."plugin-install.php?tab=search&s=um-plug&plugin-search-input=Search+Plugins'>UM-Plug</a> plugins.</p>";
+	echo '</div>';
+}
+
+function um_suggest_umplug() { echo "\n\n<!-- UM-PLUG Not Activated -->\n\n"; }
+
+um_check_umplug();
+
+
+// check um-plug, only of viewer side; when theme functions and plugins function are loaded;
+/*
+if ((!is_admin()) && (!function_exists('um_tool_which'))) {
+	die("This Theme require active <a href='http://wordpress.org/plugins/um-plug/'>um_plug</a> plugins");
+}
+*/
+
 
 // for um-reset.php
 
