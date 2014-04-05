@@ -83,8 +83,35 @@ function um_theme_register_styles() {
 
 function um_theme_register_scripts() {
 
-	if (um_get_themeoption('iehtml5')) {
-		add_action('wp_head','um_iehtml5');
+	$js_static_btm = array();
+	$js_static_top = array();
+
+	if ((file_exists(get_stylesheet_directory()."/static.js")) && (um_getoption('jsstatic'))) {
+
+		wp_enqueue_script('um-gui-lib',get_stylesheet_directory_uri()."/static.js",false,um_core_ver(),true );
+
+	} else {
+	
+		if (um_get_themeoption('umgui')) {
+			array_push($js_static_top,UMCORE_URL . '/js/um-gui-lib.js');
+			array_push($js_static_btm,um_tool_which('um-gui.js'));
+			wp_enqueue_script('um-gui-lib',UMCORE_URL . '/js/um-gui-lib.js',array(),um_core_ver(),true);
+			wp_enqueue_script('um-gui',um_tool_which('um-gui.js'),array('um-gui-lib'),um_core_ver(),true);
+		}
+
+		/* :D I forget this since begining, wow! */
+
+		array_push($js_static_top,UMCORE_URL . '/js/navigation.js');
+		array_push($js_static_top,UMCORE_URL . '/js/skip-link-focus-fix.js');
+		wp_enqueue_script( 'um-navigation', UMCORE_URL . '/js/navigation.js', array(), um_core_ver(), true );
+		wp_enqueue_script( 'um-skip-link-focus-fix', UMCORE_URL . '/js/skip-link-focus-fix.js', array(), um_core_ver(), true );
+		$js_static = array_merge($js_static_top,$js_static_btm);
+		if ( function_exists('um_makestaticJS') ) { um_makestaticJS($js_static); }	
+
+	}
+	
+	if (is_singular() && comments_open() && get_option('thread_comments')) {
+		wp_enqueue_script('comment-reply');
 	}
 
 	if (um_get_themeoption('skejs')) {
@@ -92,25 +119,15 @@ function um_theme_register_scripts() {
 		wp_enqueue_script('um-skel-lib',UMCORE_URL . '/js/skel.min.js',array('um-skel-init'),um_core_ver(),true);
 	}
 	
-	if (um_get_themeoption('umgui')) {
-		wp_enqueue_script('um-gui-lib',UMCORE_URL . '/js/um-gui-lib.js',array(),um_core_ver(),true);
-		wp_enqueue_script('um-gui',um_tool_which('um-gui.js'),array('um-gui-lib'),um_core_ver(),true);
+	if (um_get_themeoption('iehtml5')) {
+		add_action('wp_head','um_iehtml5');
 	}
-
-	if (is_singular() && comments_open() && get_option('thread_comments')) {
-		wp_enqueue_script('comment-reply');
-	}
+	
 }
 
 
 if(! function_exists('um_setup')):
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
+
 function um_setup(){
 
 	/* from UM-PLUG */

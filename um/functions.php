@@ -31,15 +31,6 @@ function um_suggest_umplug() { echo "\n\n<!-- UM-PLUG Not Activated -->\n\n"; }
 
 um_check_umplug();
 
-
-// check um-plug, only of viewer side; when theme functions and plugins function are loaded;
-/*
-if ((!is_admin()) && (!function_exists('um_tool_which'))) {
-	die("This Theme require active <a href='http://wordpress.org/plugins/um-plug/'>um_plug</a> plugins");
-}
-*/
-
-
 // for um-reset.php
 
 if (um_getoption('cssrd')) {

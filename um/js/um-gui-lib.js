@@ -17,7 +17,7 @@ function um_tab_init(obj) {
 			tab = $(target); tab.show();
 			tab.siblings('.um_tab_content').hide();
 			$(this).parent().siblings().children('a').removeClass('active');
-	})
+	});
 }
 
 function um_tab(obj) {
@@ -29,7 +29,7 @@ function um_tab(obj) {
 		if (i === 0) { $('#tab-'+safeid).show(); act=' active'; }
 		$tab.append("<li><a class='tabmenu "+act+"' href='#tab-"+safeid+"'>"+title+"</a></li>");
 	});
-	um_tab_init( $tab  );
+	um_tab_init($tab);
 }
 
 function um_content_height(target,min) {
@@ -163,13 +163,13 @@ function get_elementColor(id,what) {
 }
 
 function um_getrgbof(id,what,alpha) {
-	var rgb = get_elementColor(id,what)
+	var rgb = get_elementColor(id,what);
 	var a = "rgba("+rgb['r']+","+rgb['g']+","+rgb['b']+","+alpha+")";
 	return a;
 }
 
 function um_getmodcolor (id,what,v) {
-	var rgb = get_elementColor(id,what)
+	var rgb = get_elementColor(id,what);
 	var rgb = um_modcolor(rgb,v);
 	return um_rgbToHex(rgb);
 }
