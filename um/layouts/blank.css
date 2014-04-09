@@ -16,6 +16,7 @@ Yup, Just copy this file to create a new layout.
 
 @media screen and (max-width: 640px) {
 
+	.menu-toggle span { display: none }
 	.site { }
 	.site-header { }
 	.site-content { }

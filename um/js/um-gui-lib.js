@@ -1,12 +1,14 @@
-function um_toc(obj,ele) {
-	obj.prepend("<ol id='um_toc'></ul>");
-	$toc = obj.children('#um_toc');
+function um_toc(obj,ele,titleText) {
+	obj.prepend("<ol></ol>");
+	$toc = obj.children('ol');
 	obj.find(ele).each(function(i) {
 		title = $(this).text(); safeid = title.replace(/[\s|\W]/g,'');
 		$(this).prepend("<a id='"+safeid+"'></a>");
 		$toc.append("<li><a href='#"+safeid+"'>"+title+"</a></li>");
 	});
-	$('#um_toc').wrap('<div class="um_toc"></div>');
+	$toc.wrap('<div class="um_toc"></div>');
+	obj.children('.um_toc').prepend("<h5>"+titleText+"</h5>");
+	
 }
 
 function um_tab_init(obj) {
@@ -38,6 +40,14 @@ function um_content_height(target,min) {
 	if (h < 0 ) { h = min }
 	target.css('min-height',h+'px');
 }
+
+function um_fx_init() {
+	$('.um-msg').each( function(e) {
+		$(this).append('<i class="close umi-no"></i>');
+		$(this).click(function(e) { $(this).remove(); });
+	});
+}
+
 function um_fit_img(target) {
 	// Make images fit it's ratio
 	target.each( function(e) {
@@ -46,13 +56,12 @@ function um_fit_img(target) {
 	});
 }
 
-function um_onscroll_fixed(target,dockto,adjustment) {
+function um_onscroll_fixed(target,dockto, adjustment, margin) {
 	// Make target stop scoll at its dock position
 	var w = $(window);
 	var offset = target.offset();
 	var top = offset.top; target.data('original-y',top);
-	var margin = $('.site-header').outerHeight();
-
+	console.log(margin);
 	if (dockto) {
 		var docktoY = dockto.outerHeight();
 	} else {
@@ -65,7 +74,8 @@ function um_onscroll_fixed(target,dockto,adjustment) {
 			var fix = adjustment+docktoY;
 			target.css('position','fixed'); 
 			target.css('top',fix+"px"); 
-			target.css('z-index',99970);
+			target.css('width',"100%");
+ 			target.css('z-index',99970);
 		} else {
 			target.css('position','static');
 			target.css('top',target.data('original-y')+"px");

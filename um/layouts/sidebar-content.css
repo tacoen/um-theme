@@ -13,6 +13,7 @@ Layout: Sidebar-Content
 
 @media screen and (max-width: 640px) {
 
+	.menu-toggle span { display: none }
 	.site { }
 	.site-header { }
 	.site-content { }

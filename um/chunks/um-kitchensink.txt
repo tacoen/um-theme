@@ -1,0 +1,86 @@
+<p>Here we test almost all elements of um-gui.css</p>
+
+<h2>Messages Div</h2>
+
+<p>Require um-gui-lib.js</p>
+
+<div class="um-msg alert um-bgr_hot">You got Alert</div>
+<div class="um-msg notice um-bgr_cool">You got notice</div>
+<div class="um-msg prompt um-bgr_confirm">You got confirmed</div>
+
+<h2>Tabs</h2>
+
+<p>Also require um-gui-lib.js</p>
+
+<div class="maketab">
+		<div class="entry-content">
+			<h3 class="tab">One</h3>
+			<p>A page template that provides a key component of WordPress as a CMS
+			by meeting the need for a carefully crafted introductory page.</p>
+		</div>
+	
+		<div class="entry-content">
+			<h3 class="tab">Two</h3>
+			<ol>
+				<li>Jet Lee</li>
+				<li>Jacky Chan</li>
+				<li>Gordon Liu</li>
+				<li>Rosamund Kwan</li>
+			</ol>
+		</div>
+	
+</div>
+
+<h2>Fluid</h2>
+
+<h4>Three Collumns</h4>
+
+<div class='col3 row consist'> 
+	<div>Hamburger Fonts with a nasty bullets cooked at high. <strong>All you cant eat!</strong></div>
+	<div>Sausage Styles blended with dashed and arrows <i>ala-carte</i></div>
+	<div>HTML Noddles chopped at 360° poured with sugar and spices.</div>
+</div>
+
+<h4>4 Collumns</h4>
+
+<div class='col4 row consist'> 
+	<div>Javascripts cup for a lifetime taste. France toasted mild blended</div>
+	<div>Hamburger Fonts with a nasty bullets cooked at high</div>
+	<div>Sausage Styles blended with dashed and arrows</div>
+	<div>HTML Noddles chopped at 360° with high quality chicken meat</div>
+</div>
+
+<h4>5 Collumns</h4>
+
+<div class='col5 row consist'> 
+	<div>Javascripts cup for a lifetime taste. France toasted mild blended</div>
+	<div>Hamburger Fonts with a nasty bullets cooked at high</div>
+	<div>Sausage Styles blended with dashed and arrows</div>
+	<div>HTML Noddles chopped at 360° with high quality chicken meat</div>
+	<div>Less wine within the cold tempered node.js coded non-senses.</div>
+</div>
+
+<h2>um-gui-lib</h2>
+
+<p>Functions</p>
+
+	<div class="maketoc">
+	
+	<h4>um_toc($element,element,titletext)</h4>
+	<p>Example: <code>um_toc( $('div.maketoc'), 'h2', 'Table of contents' )</code><br/> 
+	Make TOC from <code>h2</code> Element inside <code>div.maketoc</code>. View Source code for details</p>
+	
+	<h4>um_fit_img ( $element );</h4>
+	<p>Example: <code>um_fit_img ( $('.feature-image img') )</code><br/>
+	Set each <code>.feature-image img</code> aspect ratio using height/width </p>
+
+	<h4>um_content_height( $element, min-height )</h4>
+	<p>Example: <code>um_content_height( $('#content'), 280 )</code><br/> 
+	Set  <code>#content </code> minimal height equal to window height - (site-header + site-footer) or at least 280px. So site-footer will be at bottom.
+	Sorry for not using proper English</p>
+
+	<h4>um_onscroll_fixed( $element1 , $element2 , pixel )</h4>
+	<p>Example: <code>um_onscroll_fixed($('#um-top'),$('.main-navigation'),0)</code><br/>	
+	<code>#um-top</code> will stop scrolling and dock to <code>.main-navigation</code> bottom, with 0 px height-adjustment</p>
+
+	</div>

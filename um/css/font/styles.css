@@ -1,19 +1,19 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "um-fonts";
-  src:url("fonts/um-fonts.eot");
-  src:url("fonts/um-fonts.eot?#iefix") format("embedded-opentype"),
-    url("fonts/um-fonts.woff") format("woff"),
-    url("fonts/um-fonts.ttf") format("truetype"),
-    url("fonts/um-fonts.svg#um-fonts") format("svg");
+  font-family: "umui-fonts";
+  src:url("fonts/umui-fonts.eot");
+  src:url("fonts/umui-fonts.eot?#iefix") format("embedded-opentype"),
+    url("fonts/umui-fonts.woff") format("woff"),
+    url("fonts/umui-fonts.ttf") format("truetype"),
+    url("fonts/umui-fonts.svg#umui-fonts") format("svg");
   font-weight: normal;
   font-style: normal;
 
 }
 
 [data-icon]:before {
-  font-family: "um-fonts" !important;
+  font-family: "umui-fonts" !important;
   content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;
@@ -27,7 +27,7 @@
 
 [class^="umi-"]:before,
 [class*=" umi-"]:before {
-  font-family: "um-fonts" !important;
+  font-family: "umui-fonts" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -38,411 +38,318 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.umi-torso:before {
+.umi-more-h:before {
   content: "a";
 }
-.umi-torso-business:before {
+.umi-menus:before {
   content: "b";
 }
-.umi-torso-female:before {
+.umi-more-v:before {
   content: "c";
 }
-.umi-torsos:before {
+.umi-aquo-l:before {
   content: "d";
 }
-.umi-torsos-all:before {
+.umi-aquo-r:before {
   content: "e";
 }
-.umi-torsos-all-female:before {
+.umi-aquo-u:before {
   content: "f";
 }
-.umi-torsos-female-male:before {
+.umi-aquo-d:before {
   content: "g";
 }
-.umi-torsos-male-female:before {
+.umi-cur-l:before {
   content: "h";
 }
-.umi-fontawesome-webfont:before {
+.umi-cur-l-1:before {
   content: "i";
 }
-.umi-c-right:before {
+.umi-toggle-u:before {
   content: "j";
 }
-.umi-c-left:before {
+.umi-toggle-d:before {
   content: "k";
 }
-.umi-aquo-down:before {
+.umi-search:before {
   content: "l";
 }
-.umi-aquo-up:before {
+.umi-email:before {
   content: "m";
 }
-.umi-aquo-right:before {
+.umi-no:before {
   content: "n";
 }
-.umi-aquo-left:before {
+.umi-yes:before {
   content: "o";
 }
-.umi-a-down:before {
+.umi-wench:before {
   content: "p";
 }
-.umi-a-up:before {
+.umi-pencil:before {
   content: "q";
 }
-.umi-a-right:before {
+.umi-arr-l:before {
   content: "r";
 }
-.umi-a-left:before {
+.umi-arr-r:before {
   content: "s";
 }
-.umi-fontawesome-webfont-11:before {
+.umi-arr-u:before {
   content: "t";
 }
-.umi-d-next:before {
+.umi-arr-d:before {
   content: "u";
 }
-.umi-d-ff:before {
+.umi-cur-b-u:before {
   content: "v";
 }
-.umi-d-stop:before {
+.umi-cur-b-d:before {
   content: "w";
 }
-.umi-d-pause:before {
+.umi-feed:before {
   content: "x";
 }
-.umi-fontawesome-webfont-11:before {
-  content: "t";
-}
-.umi-d-rr:before {
+.umi-point-r:before {
   content: "y";
 }
-.umi-fontawesome-webfont-17:before {
+.umi-point-l:before {
   content: "z";
 }
-.umi-d-play:before {
+.umi-point-u:before {
   content: "A";
 }
-.umi-d-last:before {
+.umi-point-d:before {
   content: "B";
 }
-.umi-d-first:before {
+.umi-attachment:before {
   content: "C";
 }
-.umi-d-prev:before {
-  content: "t";
-}
-.umi-wench:before {
-  content: "z";
-}
-.umi-d-power:before {
+.umi-bulb:before {
   content: "D";
 }
-.umi-more-h:before {
-  content: "E";
-}
-.umi-more-v:before {
-  content: "F";
-}
-.umi-no:before {
-  content: "G";
-}
-.umi-yes:before {
-  content: "H";
-}
-.umi-bc-up:before {
+.umi-thumb-d:before {
   content: "I";
 }
-.umi-bc-down:before {
+.umi-thumb-u:before {
   content: "J";
 }
-.umi-pull-down:before {
+.umi-book-open:before {
   content: "K";
 }
-.umi-push-up:before {
+.umi-book:before {
   content: "L";
 }
-.umi-attention:before {
-  content: "i";
-}
-.umi-book:before {
+.umi-bookmarks:before {
   content: "M";
 }
-.umi-calendar:before {
+.umi-bookmark:before {
   content: "N";
 }
-.umi-basket:before {
+.umi-attention:before {
   content: "O";
 }
-.umi-bag:before {
+.umi-cancel-squared:before {
   content: "P";
 }
-.umi-archive:before {
+.umi-cancel-circled:before {
   content: "Q";
 }
-.umi-cancel-circled:before {
+.umi-chat:before {
   content: "R";
 }
-.umi-cancel-squared:before {
+.umi-cog:before {
   content: "S";
 }
-.umi-chat:before {
+.umi-comment:before {
   content: "T";
 }
-.umi-comment:before {
+.umi-clock:before {
   content: "U";
 }
-.umi-floppy:before {
+.umi-compass:before {
   content: "V";
 }
-.umi-phone:before {
+.umi-credit-card:before {
   content: "W";
 }
-.umi-pencil:before {
+.umi-database:before {
   content: "X";
 }
-.umi-print:before {
-  content: "Y";
-}
-.umi-vcard:before {
-  content: "Z";
-}
-.umi-menu:before {
-  content: "0";
-}
-.umi-list:before {
-  content: "1";
-}
-.umi-twitter-circled:before {
-  content: "1";
-}
-.umi-tumblr-circled:before {
-  content: "2";
-}
-.umi-skype-circled:before {
+.umi-soundcloud:before {
   content: "3";
 }
-.umi-pinterest-circled:before {
+.umi-print:before {
+  content: "!";
+}
+.umi-popup:before {
+  content: "\"";
+}
+.umi-phone:before {
+  content: "#";
+}
+.umi-newspaper:before {
+  content: "$";
+}
+.umi-lock-open:before {
+  content: "%";
+}
+.umi-lock:before {
+  content: "&";
+}
+.umi-location:before {
+  content: "'";
+}
+.umi-twitter-circle:before {
+  content: "F";
+}
+.umi-soundcloud-circle:before {
+  content: "G";
+}
+.umi-git-circle:before {
+  content: "E";
+}
+.umi-facebook-circle:before {
+  content: "H";
+}
+.umi-google-plus-circle:before {
+  content: "Y";
+}
+.umi-linked-in-circle:before {
+  content: "Z";
+}
+.umi-instagram-circle:before {
+  content: "0";
+}
+.umi-white-question:before {
+  content: "1";
+}
+.umi-warning-alt:before {
+  content: "2";
+}
+.umi-users:before {
   content: "4";
 }
-.umi-linkedin-circled:before {
+.umi-user-male:before {
   content: "5";
 }
-.umi-facebook-circled:before {
+.umi-user-female:before {
+  content: "(";
+}
+.umi-user1:before {
+  content: ")";
+}
+.umi-globe-alt:before {
+  content: "*";
+}
+.umi-globe:before {
+  content: "+";
+}
+.umi-git-circle-alt:before {
+  content: ",";
+}
+.umi-vcard:before {
   content: "6";
 }
-.umi-window:before {
+.umi-gauge:before {
   content: "7";
 }
-.umi-thumbs-up:before {
-  content: "8";
-}
-.umi-thumbs-down:before {
+.umi-link:before {
   content: "8";
 }
 .umi-star:before {
   content: "9";
 }
 .umi-star-empty:before {
-  content: "!";
-}
-.umi-globe:before {
-  content: "\"";
-}
-.umi-fontawesome-webfont-30:before {
-  content: "#";
-}
-.umi-unlock:before {
-  content: "#";
-}
-.umi-unlock-alt:before {
-  content: "$";
-}
-.umi-github-circled:before {
-  content: "%";
-}
-.umi-gplus-circled:before {
-  content: "&";
-}
-.umi-settings:before {
-  content: "'";
-}
-.umi-retweet:before {
-  content: "(";
-}
-.umi-mail:before {
-  content: ")";
-}
-.umi-unlock:before {
-  content: "#";
-}
-.umi-unlock-alt:before {
-  content: "$";
-}
-.umi-clock:before {
-  content: "'";
-}
-.umi-compass:before {
-  content: "(";
-}
-.umi-map:before {
-  content: ")";
-}
-.umi-map:before {
-  content: ")";
-}
-.umi-photo:before {
-  content: "*";
-}
-.umi-tag:before {
-  content: "+";
-}
-.umi-tags-1:before {
-  content: ",";
-}
-.umi-cog-circled:before {
   content: "-";
 }
-.umi-cog1:before {
+.umi-warning:before {
   content: ".";
 }
-.umi-cogs:before {
+.umi-file-alt:before {
   content: "/";
 }
-.umi-bookmarks:before {
-  content: ":";
-}
-.umi-compas:before {
+.umi-file-close-alt:before {
   content: ";";
 }
-.umi-bookmark:before {
-  content: ":";
-}
-.umi-down-circled:before {
-  content: ":";
-}
-.umi-compass-1:before {
-  content: ";";
-}
-.umi-database:before {
+.umi-file-open:before {
   content: "<";
 }
-.umi-cog2:before {
-  content: "'";
+.umi-home:before {
+  content: ":";
 }
-.umi-clock:before {
-  content: "(";
-}
-.umi-layout:before {
-  content: ")";
-}
-.umi-monitor:before {
+.umi-reorder-square:before {
   content: "=";
 }
-.umi-attachment:before {
+.umi-reorder-square-line:before {
   content: ">";
 }
-.umi-newspaper:before {
-  content: "=";
-}
-.umi-elusive-icons-5:before {
-  content: ">";
-}
-.umi-wordpress-b:before {
+.umi-page:before {
   content: "?";
 }
-.umi-wordpress-w:before {
-  content: "@";
-}
-.umi-youtube-btn:before {
+.umi-page-copy:before {
   content: "[";
 }
-.umi-ics-menu:before {
+.umi-page-delete:before {
   content: "]";
 }
-.umi-ics-home:before {
+.umi-page-doc:before {
+  content: "@";
+}
+.umi-page-add:before {
   content: "^";
 }
-.umi-ics-back:before {
+.umi-map:before {
   content: "_";
 }
-.umi-playlink:before {
+.umi-page-multiple:before {
   content: "`";
 }
-.umi-fontawesome-webfont-1:before {
-  content: "`";
-}
-.umi-play-circled:before {
+.umi-page-filled:before {
   content: "{";
 }
-.umi-shield:before {
+.umi-results-demographics:before {
   content: "|";
 }
-.umi-phone-1:before {
+.umi-clipboard-notes:before {
   content: "}";
 }
-.umi-folder:before {
+.umi-css3:before {
   content: "~";
 }
-.umi-folder-open:before {
+.umi-html5:before {
   content: "\";
 }
-.umi-burning-fire:before {
+.umi-thumbnails:before {
   content: "\e000";
 }
-.umi-elusive-icons:before {
+.umi-fontawesome-webfont:before {
   content: "\e001";
 }
-.umi-wallet-money:before {
+.umi-chart-pie:before {
   content: "\e002";
 }
-.umi-lock-open:before {
-  content: "\e002";
-}
-.umi-lock:before {
+.umi-chart-line:before {
   content: "\e003";
 }
-.umi-rss:before {
+.umi-chart-bar:before {
   content: "\e004";
 }
-.umi-home:before {
+.umi-chart-area:before {
   content: "\e005";
 }
-.umi-home-alt:before {
+.umi-ying-yang:before {
   content: "\e006";
 }
-.umi-music-file:before {
-  content: "#";
-}
-.umi-movie-file:before {
-  content: "$";
-}
-.umi-image-file:before {
+.umi-photo:before {
   content: "\e007";
 }
-.umi-excel-file:before {
+.umi-web:before {
+  content: "\e008";
+}
+.umi-tables:before {
   content: "\e009";
 }
-.umi-document-file:before {
+.umi-cc:before {
   content: "\e00a";
-}
-.umi-compressed-zip:before {
-  content: "\e00b";
-}
-.umi-code-file:before {
-  content: "\e00c";
-}
-.umi-chart-file:before {
-  content: "\e00d";
-}
-.umi-certificate-file:before {
-  content: "\e00e";
-}
-.umi-bookmark-file:before {
-  content: "\e00f";
-}
-.umi-analytics-file:before {
-  content: "\e010";
-}
-.umi-back-in-time:before {
-  content: "\e008";
 }

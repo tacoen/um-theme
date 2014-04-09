@@ -11,7 +11,7 @@
 
 <div id="um-bottom">
 <nav id="site-navigation" class="main-navigation" role="navigation">
-	<h1 class="menu-toggle"><?php _e('Menu', 'undress'); ?></h1>
+	<h1 class="menu-toggle" data-icon="b"><span><?php _e('Menu', 'undress'); ?></span></h1>
 	<a class="skip-link screen-reader-text" href="#content"><?php _e('Skip to content', 'undress'); ?></a>
 	<?php wp_nav_menu(array('theme_location' => 'primary')); ?>
 </nav><!-- #site-navigation -->

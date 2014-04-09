@@ -113,7 +113,7 @@ function um_comment($comment, $args, $depth) {
 		</div>
 		</footer>
 
-		<div class="comment-content"><?php comment_text() ?></div>
+		<div class="comment-content um-content"><?php comment_text() ?></div>
 
 		<div class="reply">
 		<?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>

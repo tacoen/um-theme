@@ -17,16 +17,15 @@ UM is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc
 
 */
 
-body { font-size: 14px; line-height: 22px; font-family: Verdana, arial, helv, sans-serif; }
+body { font-size: 14px; line-height: 22px; font-family: "Open Sans", arial, helv, sans-serif; }
 
 /* Hi, Theme-Check! */
 
 #masthead { font-size: .9em; text-align: center; }
-#masthead h1{ font-size: 3.2em; text-transform: uppercase; }
-#masthead h2{ font-size: 1.6em; font-weight:400; line-height: 2em}
+#masthead h1{ font-size: 4em; text-transform: uppercase; text-shadow: 0 0 3px #FFFFFF; margin-top: 32px; }
+#masthead h2{ font-size: 1.6em; font-weight:400; line-height: 4em; text-shadow: 0 0 1px #FFFFFF;}
 
-#colophon { font-size: .8em; background: #333; color: #ccc; }
-#colophon * { color: #ccc; }
+#colophon { font-size: .8em;  }
 #colophon .site-info,
 #masthead .site-branding { padding: 64px 1% 48px 1%}
 
@@ -47,13 +46,15 @@ article:first-child{ margin-top: 0 }
 	.site { width: 100% }
 	.site-header { }
 	.site-content { }
-	.site-content .site-main { width:100%; float: none; }
-	.site-content .site-side { width: 100%; float: none; }
+	.site-content .site-main { width:98%; float: none; margin: 0 1%; }
+	.site-content .site-side { width:98%; float: none; margin: 0 1%;}
 	.site-footer { }
+	textarea { min-width: 94%; width: 94%; }
 	#um-top { }
 	.entry-content { width: 100%; }
 	aside { text-align: center; }
 	
 	#masthead h1{ font-size: 2.2em; text-transform: uppercase; }
-#masthead h2{ font-size: 1; font-weight:400; line-height: 2em}
+	#masthead h2{ font-size: 1; font-weight:400; line-height: 2em}
+	
 }

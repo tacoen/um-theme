@@ -11,8 +11,8 @@ get_header(); ?>
 
 	<div class="entry-content maketoc">
 	
-        <h1>Demo Only</h1>
-        <p>Delete this page template when you done.</p>
+	<h1>Demo Only</h1>
+    <p>Delete this page template when you done.</p>
 
 	<h2>um_toc($element,element)</h2>
 	<p style="margin-left: 4.5em; text-indent: -4.5em;">Example: <code>um_toc( $('div.maketoc'), 'h2' )</code><br/> 
@@ -37,24 +37,6 @@ get_header(); ?>
 	
 	</div>
 	
-	<div class="maketab">
-		<div class="entry-content">
-			<h3 class="tab">One</h3>
-			<p>A page template that provides a key component of WordPress as a CMS
-			by meeting the need for a carefully crafted introductory page.</p>
-		</div>
-	
-		<div class="entry-content">
-			<h3 class="tab">Two</h3>
-			<ol>
-				<li>Jet Lee</li>
-				<li>Jacky Chan</li>
-				<li>Gordon Liu</li>
-				<li>Rosamund Kwan</li>
-			</ol>
-		</div>
-	
-	</div>
 
 
 

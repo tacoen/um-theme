@@ -39,8 +39,17 @@ class um_as_theme {
 	}
 	public function um_add_menu_slug() {
 		add_theme_page( 'UM Theme Options', 'UM Theme Options', 'edit_theme_options', 'um-theme-options',array($this,'um_themeoption'));
+		if (file_exists( UMCORE_DIR. '/css/font/icons-reference.html' ) ) {
+			add_theme_page( 'UM Font References', 'UM Font References', 'edit_theme_options', 'um-fontref',array($this,'um_fontref'));
+		}
 	}
 
+	public function um_fontref() {
+		echo "<div class='wrap'><div class='um-head-set'><h2>UM - Font References</h2></div>";
+		echo "<iframe class='iframe_full' src='". UMCORE_URL. '/css/font/icons-reference.html'. "'></iframe>";
+		echo "</div>";
+	}
+	
 	public function um_themeoption() {
 		$umt=umt_args();
 		$this->options=get_option('umt');

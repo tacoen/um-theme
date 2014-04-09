@@ -13,6 +13,8 @@ Layout: Content-Sidebar
 
 @media screen and (max-width: 640px) {
 
+	.menu-toggle span { display: none }
+	#page.site { margin-top: 0 }
 	.site { }
 	.site-header { }
 	.site-content { width: 100%; }
