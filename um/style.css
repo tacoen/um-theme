@@ -1,8 +1,8 @@
 /*
 Theme Name: UM
-Theme URI: http://tacoen.github.io/um-themes
+Theme URI: https://github.com/tacoen/um-theme/tree/master/um
 Author: tacoen
-Author URI: http://tacoen.github.com
+Author URI: https://github.com/tacoen/
 Description: UM Core Theme. This theme and it's child theme require <em>UM-Plug Plugins</em>. This theme also provide a native fall-back for it's child
 Version: 1.0.0
 License: GNU General Public License
@@ -19,8 +19,6 @@ UM is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc
 
 body { font-size: 14px; line-height: 22px; font-family: "Open Sans", arial, helv, sans-serif; }
 
-/* Hi, Theme-Check! */
-
 #masthead { font-size: .9em; text-align: center; }
 #masthead h1{ font-size: 4em; text-transform: uppercase; text-shadow: 0 0 3px #FFFFFF; margin-top: 32px; }
 #masthead h2{ font-size: 1.6em; font-weight:400; line-height: 4em; text-shadow: 0 0 1px #FFFFFF;}
@@ -35,6 +33,8 @@ body { font-size: 14px; line-height: 22px; font-family: "Open Sans", arial, helv
 #content { margin: 1em auto 3em auto; }
 
 aside h1 { border-bottom: 1px solid rgba(0,0,0,0.06); }
+
+/* Hi, Theme-Check! */
 .bypostauthor { }
 .sticky { }
 
