@@ -1,7 +1,30 @@
 <?php
 /* will not included if you had UM-PLUG */
 
-if (!function_exists(um_getoption)) { 
+if (!function_exists('um_rwvar_default')) { 
+	function um_rwvar_default() {
+		return array(
+			'wpinc' => 'i',
+			'wplug' => 'g',
+			'style' => 'c',
+			'templ' => 'p',
+			'jqcdn' => 'http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js',
+			'opsfcdn' => 'http://cdn.dibiakcom.net/font/opensans/style.css',
+		);
+	}
+}
+
+if (!function_exists('um_getoption')) { 
+
+	function um_get_layout_option($where) {
+		$layout_options['none']="none"; $n=0;
+		$layout_css=glob($where."/*.css");
+		foreach ($layout_css as $lf) {
+			$f=basename($lf); $F=explode(".",$f); $n++;
+			$layout_options[$F[0]]=$f;
+		}
+		return $layout_options;
+	}
 
 	function um_getoption($w) {
 		$umo->options=get_option('umo');

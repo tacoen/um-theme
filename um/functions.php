@@ -16,9 +16,16 @@ function um_check_umplug() {
 	if(!is_plugin_active( 'um-plug/um-plug.php' )) {
 		add_action('admin_notices','um_adminnotes');
 		add_action('wp_head','um_suggest_umplug');
+		include_once UMCORE_DIR."/inc/um/um-compat.php"; 
+	} else {
+		// for um-reset.php
+		if (um_getoption('cssrd')) {
+			if (!file_exists($cssrd_php)) { rename($cssrd_dis, $cssrd_php); }
+		} else {
+			if (!file_exists($cssrd_dis)) { rename($cssrd_php, $cssrd_dis); }
+		}
 	}
-
-	include_once UMCORE_DIR."/inc/um/um-compat.php"; 
+	
 }
 
 function um_adminnotes() {
@@ -30,15 +37,6 @@ function um_adminnotes() {
 function um_suggest_umplug() { echo "\n\n<!-- UM-PLUG Not Activated -->\n\n"; }
 
 um_check_umplug();
-
-// for um-reset.php
-
-if (um_getoption('cssrd')) {
-	if (!file_exists($cssrd_php)) { rename($cssrd_dis, $cssrd_php); }
-} else {
-	if (!file_exists($cssrd_dis)) { rename($cssrd_php, $cssrd_dis); }
-}
-
 
 if(! isset($content_width)){
 	$content_width = 640; /* pixels */

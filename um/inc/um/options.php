@@ -46,7 +46,7 @@ class um_as_theme {
 
 	public function um_fontref() {
 		echo "<div class='wrap'><div class='um-head-set'><h2>UM - Font References</h2></div>";
-		echo "<iframe class='iframe_full' src='". UMCORE_URL. '/css/font/icons-reference.html'. "'></iframe>";
+		echo "<iframe class='iframe_full' style='width:100%; height: 520px;' src='". UMCORE_URL. '/css/font/icons-reference.html'. "'></iframe>";
 		echo "</div>";
 	}
 	
