@@ -4,57 +4,43 @@ Theme URI: https://github.com/tacoen/um-theme/tree/master/um
 Author: tacoen
 Author URI: https://github.com/tacoen/
 Description: UM Core Theme. This theme and it's child theme require <em>UM-Plug Plugins</em>. This theme also provide a native fall-back for it's child
-Version: 1.0.0
+Version: 1.0.2
 License: GNU General Public License
 License URI: license.txt
 Text Domain: um
 Tags: white, theme-options, one-column, two-columns, right-sidebar, fluid-layout, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
-
 This theme, like WordPress, is licensed under the GPL.
-
-Use it to make something cool, have fun, and share what you've learned with others.
-UM is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
-
 */
 
-body { font-size: 14px; line-height: 22px; font-family: "Open Sans", arial, helv, sans-serif; }
+body { font-family: "Open Sans",arial,helv,sans-serif; font-weight: 400; margin-top: 32px; }
+body.admin-bar { margin-top:0 }
 
-#masthead { font-size: .9em; text-align: center; }
-#masthead h1{ font-size: 4em; text-transform: uppercase; text-shadow: 0 0 3px #FFFFFF; margin-top: 32px; }
-#masthead h2{ font-size: 1.6em; font-weight:400; line-height: 4em; text-shadow: 0 0 1px #FFFFFF;}
+footer,header,aside { font-weight: 300; }
+img.avatar { border-width: 1px; border-style: solid; }
+pre {border-width: 1px; border-style: solid; padding: 1%}
 
-#colophon { font-size: .8em;  }
-#colophon .site-info,
-#masthead .site-branding { padding: 64px 1% 48px 1%}
-
-#um-top { background: #eee; display:table; width: 100% }
-#um-top .breadcrumb { padding: 0 1%; font-size: .8em; }
-
-#content { margin: 1em auto 3em auto; }
-
-aside h1 { border-bottom: 1px solid rgba(0,0,0,0.06); }
-
-/* Hi, Theme-Check! */
-.bypostauthor { }
-.sticky { }
-
-article:first-child{ margin-top: 0 }
-.page-title { font-weight: 100; letter-spacing: 2px; border: 1px solid rgba(0,0,0,0.06); padding: 1%;text-align: center; }
-
-@media screen and (max-width: 640px) {
-
-	.site { width: 100% }
-	.site-header { }
-	.site-content { }
-	.site-content .site-main { width:98%; float: none; margin: 0 1%; }
-	.site-content .site-side { width:98%; float: none; margin: 0 1%;}
-	.site-footer { }
-	textarea { min-width: 94%; width: 94%; }
-	#um-top { }
-	.entry-content { width: 100%; }
-	aside { text-align: center; }
-	
-	#masthead h1{ font-size: 2.2em; text-transform: uppercase; }
-	#masthead h2{ font-size: 1; font-weight:400; line-height: 2em}
-	
+#um-top  { 
+	margin:0 0 .5em 0; font-size: .9em; height: 30px; line-height: 30px;
+	padding: 1%; width:98%;
 }
+
+#um-crumbs { float: left; margin:0; padding: 0; width: 75%; }
+#um-crumbs li { float: left; list-style-type:none;  }
+#um-crumbs li:before { content: "\203A"; padding: 0 .5em }
+#um-crumbs li:first-child:before { content: ""; padding: 0 0; }
+
+#um-site-search { width: 19%; float: right; margin-right: 1% }
+#um-site-search .search-submit { display:none; }
+#um-site-search .search-field { min-width: 100%; }
+
+.site { }
+.site-header { clear: both; width: 100%; }
+.inside { margin: 1% }
+.site-content { width: 98%; margin: 0 auto; }
+.site-footer { clear: both; width: 100%; }
+.site-info { font-size: .8em; padding: 1% }
+
+.site-branding{ font-size: 2em; padding: 1em 0 1.5em 0; text-align: center; font-weight: 300; text-shadow: 1px 1px 2px #666666;}
+.site-title { font-size: 1.5em; text-transform: uppercase; margin-bottom: .5em; }
+.site-description { font-size: .5em; font-weight: 400 }
+

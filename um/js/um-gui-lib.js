@@ -2,8 +2,8 @@ function um_toc(obj,ele,titleText) {
 	obj.prepend("<ol></ol>");
 	$toc = obj.children('ol');
 	obj.find(ele).each(function(i) {
-		title = $(this).text(); safeid = title.replace(/[\s|\W]/g,'');
-		$(this).prepend("<a id='"+safeid+"'></a>");
+		title = jQuery(this).text(); safeid = title.replace(/[\s|\W]/g,'');
+		jQuery(this).prepend("<a id='"+safeid+"'></a>");
 		$toc.append("<li><a href='#"+safeid+"'>"+title+"</a></li>");
 	});
 	$toc.wrap('<div class="um_toc"></div>');
@@ -14,11 +14,11 @@ function um_toc(obj,ele,titleText) {
 function um_tab_init(obj) {
 		obj.find('a.tabmenu').click(function(e) {
 			e.preventDefault();
-			$(this).addClass('active');
-			target = $(this).attr('href'); 
-			tab = $(target); tab.show();
+			jQuery(this).addClass('active');
+			target = jQuery(this).attr('href'); 
+			tab = jQuery(target); tab.show();
 			tab.siblings('.um_tab_content').hide();
-			$(this).parent().siblings().children('a').removeClass('active');
+			jQuery(this).parent().siblings().children('a').removeClass('active');
 	});
 }
 
@@ -26,9 +26,9 @@ function um_tab(obj) {
 	obj.prepend("<ul id='um_tab'></ul>");
 	$tab = obj.children('#um_tab');
 	obj.find('h3').each(function(i) {
-		act = ''; title = $(this).text(); safeid = title.replace(/[\s|\W]/g,'');
-		$(this).parent().wrap("<div class='um_tab_content hide' id='tab-"+safeid+"'></div>");
-		if (i === 0) { $('#tab-'+safeid).show(); act=' active'; }
+		act = ''; title = jQuery(this).text(); safeid = title.replace(/[\s|\W]/g,'');
+		jQuery(this).parent().wrap("<div class='um_tab_content hide' id='tab-"+safeid+"'></div>");
+		if (i === 0) { jQuery('#tab-'+safeid).show(); act=' active'; }
 		$tab.append("<li><a class='tabmenu "+act+"' href='#tab-"+safeid+"'>"+title+"</a></li>");
 	});
 	um_tab_init($tab);
@@ -36,56 +36,60 @@ function um_tab(obj) {
 
 function um_content_height(target,min) {
 	// Make target fit its windows
-	var h = $(window).innerHeight()-$('#colophon').outerHeight()-$('#masthead').outerHeight();
+	var h = jQuery(window).innerHeight()-jQuery('#colophon').outerHeight()-jQuery('#masthead').outerHeight();
 	if (h < 0 ) { h = min }
 	target.css('min-height',h+'px');
 }
 
 function um_fx_init() {
-	$('.um-msg').each( function(e) {
-		$(this).append('<i class="close umi-no"></i>');
-		$(this).click(function(e) { $(this).remove(); });
+	jQuery('.um-msg').each( function(e) {
+		$this = jQuery(this);
+		console.log($this.html());
+		$this.append('<i class="close umi-no"></i>');
+		$this.click(function(e) { jQuery(this).remove(); });
 	});
 }
 
 function um_fit_img(target) {
 	// Make images fit it's ratio
 	target.each( function(e) {
-		var iw = $(this).attr('width'); var ih = $(this).attr('height');
-		var w = $(this).width(); $(this).height(h = (ih/iw)*w);
+		var iw = jQuery(this).attr('width'); var ih = jQuery(this).attr('height');
+		var w = jQuery(this).width(); jQuery(this).height(h = (ih/iw)*w);
 	});
 }
 
-function um_onscroll_fixed(target,dockto, adjustment, margin) {
+function um_onscroll_fixed(target,dockto,adjustment) {
 	// Make target stop scoll at its dock position
-	var w = $(window);
-	var offset = target.offset();
-	var top = offset.top; target.data('original-y',top);
-	console.log(margin);
-	if (dockto) {
-		var docktoY = dockto.outerHeight();
+	var w = jQuery(window);
+	if (target.length > 0) {
+		console.log('ready');
+		var offset = target.offset();
+		var top = offset.top; target.data('original-y',top);
+		var margin = jQuery('.site-header').outerHeight();
+		if (dockto) {
+			var docktoY = dockto.outerHeight();
+		} else {
+			var docktoY = jQuery('.main-navigation').outerHeight();
+		}
+		w.on( "scroll", function(e) {
+			var scroll = w.scrollTop();
+			if (scroll > margin) { 
+				var fix = adjustment+docktoY;
+				target.css('position','fixed'); 
+				target.css('top',fix+"px"); 
+				target.css('z-index',99970);
+			} else {
+				target.css('position','static');
+				target.css('top',target.data('original-y')+"px");
+			}
+		});
 	} else {
-		var docktoY = $('.main-navigation').outerHeight();
+		console.log("um_onscroll_fixed: target not found");
 	}
 	
-	w.on( "scroll", function(e) {
-		var scroll = w.scrollTop();
-		if (scroll > margin) { 
-			var fix = adjustment+docktoY;
-			target.css('position','fixed'); 
-			target.css('top',fix+"px"); 
-			target.css('width',"100%");
- 			target.css('z-index',99970);
-		} else {
-			target.css('position','static');
-			target.css('top',target.data('original-y')+"px");
-		}
-	});
-
 }
 
 /* ---------------------------------------------------------------------------- 
- * css colours manipulations 
  *
  */
 

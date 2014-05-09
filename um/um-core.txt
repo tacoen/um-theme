@@ -1,1 +1,0 @@
-um-core.txt --just to mark this theme as um parent template

@@ -6,7 +6,7 @@
  defined('ABSPATH') or die('huh?');
 
 
-function breadcrumb() { um_breadcrumb_script();  }
+function umtag_breadcrumb() { um_breadcrumb_script();  }
 
 function um_breadcrumb_script() {
 

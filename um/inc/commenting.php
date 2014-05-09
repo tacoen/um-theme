@@ -108,7 +108,8 @@ function um_comment($comment, $args, $depth) {
 		<div class="comment-metadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
 			<?php
 				/* translators: 1: date, 2: time */
-				printf( __('%1$s at %2$s','um'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)','um'),'  ','' );
+				printf( __('%1$s at %2$s','um'), get_comment_date(),  get_comment_time()) ?></a>
+				<?php edit_comment_link(__('Edit','um'),'  ','' );
 			?>
 		</div>
 		</footer>

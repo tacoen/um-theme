@@ -24,10 +24,11 @@
 	<h2 class="site-description"><?php bloginfo('description'); ?></h2>
 	</div>
 </div>
-</header><!-- #masthead -->
 <div id="um-top">
-<div class="breadcrumb"><?php umtag('breadcrumb');?></div>
+<?php umtag('breadcrumb');?>
+<?php umtag('searchbox'); ?>
 </div>
+</header><!-- #masthead -->
 
 <div id="content" class="site-content">
 

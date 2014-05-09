@@ -1,0 +1,250 @@
+<p>This contents is chunks demo. It's html element inside contents for 
+style standards. We create this because we are to lazzy to import 
+<code>wptest-data</code>, a simple textfile shall do, thats why.</p> 
+
+<h2>Forms + UM-GUI</h2>
+
+<form action="#" method="post" class="um-form">
+	
+<p>Three cols, compact entry:</h3>
+
+<div class="col3 clear">
+	<div class="compact"><label title="enter your name">label:</label><input type="text" name="field1" class="rounded edit"></div>
+	<div class="compact"><label title="enter your name">label:</label><input type="text" disabled="" name="field1" class="rounded edit"></div>
+
+	<div class="compact"><label title="enter your name">Select:</label>
+	<select id="dd1" class="fui_dropdown" name="field5">
+    <option value="BR">Brasil</option>
+    <option value="FR">France</option>
+    <option value="DE">Germany</option>
+    <option value="IN">India</option>
+    <option value="JP">Japan</option>
+    <option value="RS">Serbia</option>
+    <option value="UK">United Kingdom</option>
+    <option value="US">United States</option>
+	</select>
+	</div>
+	
+</div>
+	
+	<h3>For lines entry:</h3>
+	<p class="line"><label title="enter your name">label:</label><input type="text" name="field1" class="rounded edit"></p>
+	<p class="line"><label title="enter your name">label:</label><input type="text" name="field2" class="rounded edit"><span class="option">and has option to be notice</span></p>
+	<p class="line"><label title="enter your name">label:</label>
+	<textarea name="field3" class="edit">Hi there! I'm a bike messenger by day, aspiring actor by night, and this is my blog. I live in Los Angeles, have a great dog named Jack, and I like piña coladas. (And gettin' caught in the rain.)Vestibulum eget magna eget metus ultricies lobortis id eget tellus. Etiam in rutrum turpis. Maecenas vel erat sit amet augue vulputate convallis at quis metus. Sed auctor blandit justo sit</textarea></p>
+	<p class="submit"><label>&nbsp;</label><input type="submit" name="submita" class="um-bgr_prompt" value="Submit"><span class="option">There is also an option</span></p>	
+</form>
+
+<div class='grid clear'> 
+
+	<div class="g34">
+	<h2>H2 - Entry Title</h2> 
+
+	<p>In simple sample loops for <code>.entry-content</code> that contain simple sample text for simple sample loops. As <strong>a new</strong> WordPress 
+	user, you should go to <a href="http://wp.s.dibiakcom.net/wp-admin/">your dashboard</a> to delete this page and create new pages for your content. 
+	Have fun! Sed auctor blandit justo sit <a href="mailto:amet@dictum.com">amet dictum</a></p> 
+
+	<h2>Messages Div</h2>
+
+	<p>Require <strong>um-gui-lib.js</strong></p>
+
+	<div class="um-msg alert um-bgr_hot">You got Alert</div>
+	<div class="um-msg notice um-bgr_cool">You got notice</div>
+	<div class="um-msg prompt um-bgr_confirm">You got confirmed</div>
+	
+	
+	</div>
+
+	<div class="g14">
+		<p><small>You can use <strong>um-scheme.css</strong> to colours element,
+		and div are div &mdash; p are p.</small></p>
+		<p><button class="full-width um-link um-bgr_confirm">button</button></p>
+		<p><button class="full-width um-link um-bgr_cool">button</button></p>
+		<p><button class="full-width um-link um-bgr_hot">button</button></p>
+		<p><button class="full-width um-link um-bgr_prompt">button</button></p>
+		
+		<div class="box rounded inside small">
+			<strong>Now</strong> You had a generic .box which are .rounded. and has padding from .inside,
+			font are small because it has .small
+		</div>
+		
+		<div class="rounded inside small">
+			without .box, incase you wonder
+		</div>
+		
+		<div class="box rounded inside small um-page um-bgr_title">
+			It also can be coloured.
+		</div>
+		
+	</div>
+
+</div>
+
+<p>In 4 cols</p>
+
+<div class='col4 clear'> 
+	<div><button class="full-width um-link um-bgr_line">button</button></div>
+	<div><button class="full-width um-link um-bgr_page">button</button></div>
+	<div><button class="full-width um-link um-bgr_text">button</button></div>
+	<div><button class="full-width um-page um-bgr_title">button</button></div>
+</div>
+
+
+	
+<div class='col2 clear'> 
+
+<div> 
+
+<h2>Heading</h2> 
+
+<h1>H1 - Page Title</h1> 
+
+<p>This is simple sample text (1<sup>st</sup>)  in simple sample loops </p>
+
+<h2>H2 - Entry Title</h2> 
+
+<p>In simple sample loops for <code>.entry-content</code> that contain simple sample text for simple sample loops. As <strong>a new</strong> WordPress 
+user, you should go to <a href="http://wp.s.dibiakcom.net/wp-admin/">your dashboard</a> to delete this page and create new pages for your content. 
+Have fun! Sed auctor blandit justo sit <a href="mailto:amet@dictum.com">amet dictum</a></p> 
+	
+<h3>H3 - Sub-Title</h3> 
+
+<p>Heading 3 is near contents, a section divider with sub-titles. A sub of sub.</p> 
+
+<h4>H4 - Paragraph Title</h4> 
+<p>H4,h5,h6 are attached-to-next. So is simple 
+sample text in simple sample loops that contain simple sample text for 
+simple sample loops.</p> 
+
+<h5>Header five</h5> 
+<p>This is <cite>simple sample</cite> text in 
+simple sample loops <em>em —</em> that contain simple sample text for 
+simple sample loops.</p> 
+
+<h6>Header six</h6> 
+<p>This is bellow h6. h6 are great for citation</p> 
+
+<h2>Block</h2> 
+
+<blockquote>Hi there! I'm a bike messenger by day, aspiring actor by 
+night, and this is my blog. I live in Los Angeles, have a great dog 
+named Jack, and I like piña coladas. (And gettin' caught in the 
+rain.)</blockquote> 
+
+<h2>Pre</h2> 
+
+<p>Pre is great for code! but please...</p>
+<pre><code>$s = 10;
+	
+for ($i; $i<$s; $i++) {
+	if ($i <=1 ) { 
+		echo $i . "pole";
+	} else {
+		echo $i . "poles";
+	}
+}</code></pre> 
+
+<p>Pre is for any TTY</p>
+
+<pre>
+    +----+------------+
+123 | UM | Undress Me | ABC
+    +----+------------+
+</pre>
+
+</div><div class='last'> 
+
+<h2>Misc</h2>
+
+<p>Ut<sup>123</sup> sed odio tortor<sub>321</sub>, tempor luctus tortor. <del>Sed pharetra</del>,
+felis sit amet condimentum egestas, nisl magna vulputate eros, vel tempus felis
+nisi ut metus. <ins>Proin adipiscing</ins> urna pharetra imperdiet dapibus.</p>
+
+<h2>Ordered List</h2> 
+
+<ol>
+<li>Aenean ullamcorper dolor in mauris imperdiet eu facilisis sapien commodo.</li>
+<li>In hac habitasse platea dictumst.</li> 
+<li>Aenean ullamcorper dolor in mauris imperdiet eu facilisis sapien commodo.</li> 
+</ol>
+
+<h2>Unodered List</h2> 
+
+<ul> 
+<li>leo mauris porta magna,</li> 
+<li>ut facilisis neque neque vel</li>
+<li>elit! In hac habitasse platea dictumst.</li>
+</ul> 
+
+<h2>Mixed List</h2> 
+
+<ol> 
+<li>In hac habitasse platea dictumst. 
+<ul> 
+<li>Aenean ullamcorper dolor in mauris imperdiet eu facilisis sapien commodo.</li>
+<li>Aenean metus nulla, iaculis vel facilisis eu, tincidunt nec dolor.</li>
+</ul>
+</li> 
+<li>In hac habitasse platea facilisis. 
+<ol>
+<li>Aenean metus nulla, iaculis vel facilisis eu, tincidunt nec dolor.</li>
+<li>Hi there! I'm a bike messenger by day,</li>
+</ol>
+</li> 
+</ol> 
+
+<h2>Table</h2> 
+
+<table> 
+<thead>
+<tr><th>Employee</th><th>Salary</th><th>Notes</th></tr> 
+</thead> 
+<tfoot>
+<tr><th>Employee</th><th>Salary</th><th></th></tr> 
+</foot> 
+<tbody> 
+<tr><th><a href="http://example.org/">John Doe</a></th> 
+<td>$1</td> 
+<td>Because that’s all Steve Jobs needed for a salary.</td> 
+</tr> 
+<tr><th>Jane Doe</th> 
+<td>$100K</td>
+<td>For all the blogging she does.</td> 
+</tr>
+<tr><th><a href="http://example.org/">Fred Bloggs</a></th>
+<td>$100M</td> 
+<td>Pictures are worth a thousand words, right? So Jane x 1,000.</td> 
+</tr>
+<tr><th><a href="http://example.org/">Jane Bloggs</a></th> 
+<td>$100B</td>
+<td>With hair like that?! Enough said…</td>
+</tr> 
+</tbody> 
+</table> 
+
+<h2>Definition</h2>
+
+<dl>
+<dt>Vivamus pretium,</dt>
+<dd>mi molestie mollis venenatis,</dd>
+<dd>leo mauris porta magna,</dd>
+<dd>ut facilisis neque neque vel</dd>
+<dt>elit. In hac habitasse platea dictumst.</dt>
+<dd>Aenean ullamcorper dolor in mauris imperdiet eu facilisis sapien commodo.</dd>
+<dd>Aenean metus nulla, iaculis vel facilisis eu, tincidunt nec dolor.</dd>
+</dl>
+
+</div>
+
+</div><!-- eo col2-->
+
+<h5>Semi Colophon</h5> 
+
+<p>This theme, like WordPress, is licensed under the GPL.<br/> Use it to 
+make something cool, have fun, and share what you've learned with 
+others. UM is based on <a href="http://underscores.me/">Underscores</a>, 
+© 2012-2014 Automattic, Inc.</p> 
+
+<div class="full centered">
+<h1><big>Be sure to test this on Media Queries<br/>and build something awesome</big></h1>
+</div>
