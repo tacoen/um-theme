@@ -2,6 +2,7 @@
 style standards. We create this because we are to lazzy to import 
 <code>wptest-data</code>, a simple textfile shall do, thats why.</p> 
 
+
 <h2>Forms + UM-GUI</h2>
 
 <form action="#" method="post" class="um-form">
@@ -248,3 +249,134 @@ others. UM is based on <a href="http://underscores.me/">Underscores</a>,
 <div class="full centered">
 <h1><big>Be sure to test this on Media Queries<br/>and build something awesome</big></h1>
 </div>
+
+<hr>
+
+<h1>umi-wp WebFonts</h1>
+
+<h2>Using html entities</h2>
+
+<p><span class='umi'> &laquo; 1 2 3 4 &raquo;</span></p>
+
+<h2>Icon references</h2>
+
+<div id="umi-fontest">
+
+<!--
+.(.+):before(.+)"(.+)".*\}
+<div><i class='\1'></i>\3 \1 </div>
+-->
+<div><i class='umi-point-up'></i>umi-point-up <code>\261d</code></div>
+<div><i class='umi-point-right'></i>umi-point-right <code>\261e</code></div>
+<div><i class='umi-point-down'></i>umi-point-down <code>\261f</code></div>
+<div><i class='umi-point-left'></i>umi-point-left <code>\261c</code></div>
+<div><i class='umi-googleplus'></i>umi-googleplus <code>\e612</code></div>
+<div><i class='umi-googleplus2'></i>umi-googleplus2 <code>\e613</code></div>
+<div><i class='umi-googleplus3'></i>umi-googleplus3 <code>\e614</code></div>
+<div><i class='umi-facebook'></i>umi-facebook <code>\e615</code></div>
+<div><i class='umi-facebook2'></i>umi-facebook2 <code>\e616</code></div>
+<div><i class='umi-facebook3'></i>umi-facebook3 <code>\e617</code></div>
+<div><i class='umi-twitter'></i>umi-twitter <code>\e618</code></div>
+<div><i class='umi-twitter2'></i>umi-twitter2 <code>\e619</code></div>
+<div><i class='umi-twitter3'></i>umi-twitter3 <code>\e61a</code></div>
+<div><i class='umi-feed'></i>umi-feed <code>\e61b</code></div>
+<div><i class='umi-vimeo'></i>umi-vimeo <code>\e61c</code></div>
+<div><i class='umi-vimeo2'></i>umi-vimeo2 <code>\e61d</code></div>
+<div><i class='umi-vimeo3'></i>umi-vimeo3 <code>\e61e</code></div>
+<div><i class='umi-github'></i>umi-github <code>\e61f</code></div>
+<div><i class='umi-github2'></i>umi-github2 <code>\e620</code></div>
+<div><i class='umi-wordpress'></i>umi-wordpress <code>\e63f</code></div>
+<div><i class='umi-tumblr'></i>umi-tumblr <code>\e621</code></div>
+<div><i class='umi-file-pdf'></i>umi-file-pdf <code>\e622</code></div>
+<div><i class='umi-file-word'></i>umi-file-word <code>\e623</code></div>
+<div><i class='umi-file-excel'></i>umi-file-excel <code>\e624</code></div>
+<div><i class='umi-file-zip'></i>umi-file-zip <code>\e625</code></div>
+<div><i class='umi-file-powerpoint'></i>umi-file-powerpoint <code>\e626</code></div>
+<div><i class='umi-file-css'></i>umi-file-css <code>\e627</code></div>
+<div><i class='umi-search'></i>umi-search <code>\27a0</code></div>
+<div><i class='umi-envelope-o'></i>umi-envelope-o <code>\2709</code></div>
+<div><i class='umi-heart'></i>umi-heart <code>\2665</code></div>
+<div><i class='umi-star'></i>umi-star <code>\2605</code></div>
+<div><i class='umi-star-o'></i>umi-star-o <code>\2606</code></div>
+<div><i class='umi-th'></i>umi-th <code>\2637</code></div>
+<div><i class='umi-check'></i>umi-check <code>\2713</code></div>
+<div><i class='umi-times'></i>umi-times <code>\d7</code></div>
+<div><i class='umi-edit'></i>umi-edit <code>\270f</code></div>
+<div><i class='umi-arrow-left'></i>umi-arrow-left <code>\2190</code></div>
+<div><i class='umi-arrow-right'></i>umi-arrow-right <code>\2192</code></div>
+<div><i class='umi-arrow-up'></i>umi-arrow-up <code>\2191</code></div>
+<div><i class='umi-arrow-down'></i>umi-arrow-down <code>\2193</code></div>
+<div><i class='umi-caret-down'></i>umi-caret-down <code>\25bc</code></div>
+<div><i class='umi-caret-up'></i>umi-caret-up <code>\25b2</code></div>
+<div><i class='umi-caret-left'></i>umi-caret-left <code>\25c0</code></div>
+<div><i class='umi-caret-right'></i>umi-caret-right <code>\25b6</code></div>
+<div><i class='umi-angle-double-left'></i>umi-angle-double-left <code>\ab</code></div>
+<div><i class='umi-angle-double-right'></i>umi-angle-double-right <code>\bb</code></div>
+<div><i class='umi-angle-double-up'></i>umi-angle-double-up <code>\f102</code></div>
+<div><i class='umi-angle-double-down'></i>umi-angle-double-down <code>\f103</code></div>
+<div><i class='umi-angle-left'></i>umi-angle-left <code>\2039</code></div>
+<div><i class='umi-angle-right'></i>umi-angle-right <code>\203a</code></div>
+<div><i class='umi-angle-up'></i>umi-angle-up <code>\5e</code></div>
+<div><i class='umi-angle-down'></i>umi-angle-down <code>\76</code></div>
+<div><i class='umi-desktop'></i>umi-desktop <code>\31</code></div>
+<div><i class='umi-laptop'></i>umi-laptop <code>\32</code></div>
+<div><i class='umi-tablet'></i>umi-tablet <code>\33</code></div>
+<div><i class='umi-mobile-phone'></i>umi-mobile-phone <code>\34</code></div>
+<div><i class='umi-ellipsis-h'></i>umi-ellipsis-h <code>\22ef</code></div>
+<div><i class='umi-ellipsis-v'></i>umi-ellipsis-v <code>\22ee</code></div>
+<div><i class='umi-paperclip'></i>umi-paperclip <code>\e600</code></div>
+<div><i class='umi-user'></i>umi-user <code>\e601</code></div>
+<div><i class='umi-vcard'></i>umi-vcard <code>\e602</code></div>
+<div><i class='umi-location'></i>umi-location <code>\e603</code></div>
+<div><i class='umi-map'></i>umi-map <code>\e644</code></div>
+<div><i class='umi-chat'></i>umi-chat <code>\e604</code></div>
+<div><i class='umi-comment'></i>umi-comment <code>\e641</code></div>
+<div><i class='umi-house'></i>umi-house <code>\e640</code></div>
+<div><i class='umi-printer'></i>umi-printer <code>\e645</code></div>
+<div><i class='umi-link'></i>umi-link <code>\e605</code></div>
+<div><i class='umi-cog'></i>umi-cog <code>\e628</code></div>
+<div><i class='umi-tools'></i>umi-tools <code>\e629</code></div>
+<div><i class='umi-tag'></i>umi-tag <code>\e606</code></div>
+<div><i class='umi-camera'></i>umi-camera <code>\e607</code></div>
+<div><i class='umi-book'></i>umi-book <code>\e608</code></div>
+<div><i class='umi-newspaper'></i>umi-newspaper <code>\e609</code></div>
+<div><i class='umi-clock'></i>umi-clock <code>\231a</code></div>
+<div><i class='umi-calendar'></i>umi-calendar <code>\e63c</code></div>
+<div><i class='umi-key'></i>umi-key <code>\26bf</code></div>
+<div><i class='umi-earth'></i>umi-earth <code>\e60a</code></div>
+<div><i class='umi-code'></i>umi-code <code>\e63e</code></div>
+<div><i class='umi-cart'></i>umi-cart <code>\e62a</code></div>
+<div><i class='umi-rss'></i>umi-rss <code>\e60b</code></div>
+<div><i class='umi-lock'></i>umi-lock <code>\e62b</code></div>
+<div><i class='umi-lock-open'></i>umi-lock-open <code>\e62c</code></div>
+<div><i class='umi-logout'></i>umi-logout <code>\e63a</code></div>
+<div><i class='umi-login'></i>umi-login <code>\e63b</code></div>
+<div><i class='umi-minus'></i>umi-minus <code>\e62d</code></div>
+<div><i class='umi-plus'></i>umi-plus <code>\e62e</code></div>
+<div><i class='umi-cross'></i>umi-cross <code>\22a0</code></div>
+<div><i class='umi-cross2'></i>umi-cross2 <code>\2297</code></div>
+<div><i class='umi-help'></i>umi-help <code>\e630</code></div>
+<div><i class='umi-warning'></i>umi-warning <code>\e631</code></div>
+<div><i class='umi-list'></i>umi-list <code>\39e</code></div>
+<div><i class='umi-pictures'></i>umi-pictures <code>\e60c</code></div>
+<div><i class='umi-video'></i>umi-video <code>\e60d</code></div>
+<div><i class='umi-music'></i>umi-music <code>\e60e</code></div>
+<div><i class='umi-folder'></i>umi-folder <code>\e60f</code></div>
+<div><i class='umi-bookmark'></i>umi-bookmark <code>\e610</code></div>
+<div><i class='umi-bookmarks'></i>umi-bookmarks <code>\e611</code></div>
+<div><i class='umi-play'></i>umi-play <code>\e632</code></div>
+<div><i class='umi-pause'></i>umi-pause <code>\e633</code></div>
+<div><i class='umi-record'></i>umi-record <code>\e634</code></div>
+<div><i class='umi-stop'></i>umi-stop <code>\e635</code></div>
+<div><i class='umi-next'></i>umi-next <code>\e636</code></div>
+<div><i class='umi-previous'></i>umi-previous <code>\e637</code></div>
+<div><i class='umi-first'></i>umi-first <code>\e638</code></div>
+<div><i class='umi-last'></i>umi-last <code>\e639</code></div>
+<div><i class='umi-arrow-left2'></i>umi-arrow-left2 <code>\21a4</code></div>
+<div><i class='umi-arrow-down2'></i>umi-arrow-down2 <code>\21a7</code></div>
+<div><i class='umi-arrow-up2'></i>umi-arrow-up2 <code>\21a5</code></div>
+<div><i class='umi-arrow-right2'></i>umi-arrow-right2 <code>\21a6</code></div>
+
+</div>
+
+<p>Links: <a href="/wp-content/plugins/um-plug/prop/css/fonts/demo.html">Icon Reference.html</a>.</p>

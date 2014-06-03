@@ -3,8 +3,8 @@ Theme Name: um
 Layout: Content-Sidebar
 */
 
-.site-side { float: right; width: 20%; overflow:hidden; }
-.site-main { float: left; width: 75%; overflow:hidden; }
+.site-side { float: right; width: 20%;  }
+.site-main { float: left; width: 75%;  }
 
 @media screen and (max-width: 800px) {
 	#secondary { display:table; width:100%; }

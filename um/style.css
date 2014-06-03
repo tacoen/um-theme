@@ -3,44 +3,50 @@ Theme Name: UM
 Theme URI: https://github.com/tacoen/um-theme/tree/master/um
 Author: tacoen
 Author URI: https://github.com/tacoen/
-Description: UM Core Theme. This theme and it's child theme require <em>UM-Plug Plugins</em>. This theme also provide a native fall-back for it's child
-Version: 1.0.2
+Description: UM Core/Starter theme. This theme provide/suggest basic skeleton for scripts and styles(with media queries). Theme options and customization available via UM-Plug Plugins. UM Theme base on _s Wordpress Template(html5, tags, class, and id)
+Version: 1.0.8
 License: GNU General Public License
 License URI: license.txt
 Text Domain: um
-Tags: white, theme-options, one-column, two-columns, right-sidebar, fluid-layout, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Tags: white, fluid-layout, custom-menu, custom-header, editor-style, featured-images, microformats, post-formats, sticky-post
 This theme, like WordPress, is licensed under the GPL.
 */
 
-body { font-family: "Open Sans",arial,helv,sans-serif; font-weight: 400; margin-top: 32px; }
-body.admin-bar { margin-top:0 }
+body { font-family: "Open Sans",arial,helv,sans-serif; }
 
-footer,header,aside { font-weight: 300; }
-img.avatar { border-width: 1px; border-style: solid; }
-pre {border-width: 1px; border-style: solid; padding: 1%}
+.widget-area aside { margin-bottom: 1em; }
 
-#um-top  { 
-	margin:0 0 .5em 0; font-size: .9em; height: 30px; line-height: 30px;
-	padding: 1%; width:98%;
+.micro { font-size: .8em; line-height: 1.25em; }
+
+.site-content,
+.inside { padding: 1%; }
+.site-branding { 
+	margin-top: 32px;
+	text-align: center; width: 100%; 
+	display:-webkit-box;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
 }
 
-#um-crumbs { float: left; margin:0; padding: 0; width: 75%; }
-#um-crumbs li { float: left; list-style-type:none;  }
-#um-crumbs li:before { content: "\203A"; padding: 0 .5em }
-#um-crumbs li:first-child:before { content: ""; padding: 0 0; }
+.site-title { font-size: 2em; line-height:1; text-transform: uppercase; vertical-align:middle;}
+.site-description { font-size: 1em; }
 
+.site-footer { border-top: 1px solid #ccc; padding: 1em 0 3em 0; margin-top: 1em; }
+
+#um-top { padding: 1%; height: 24px; }
+#um-crumbs { margin:0; width: 70%; float: left;  }
 #um-site-search { width: 19%; float: right; margin-right: 1% }
 #um-site-search .search-submit { display:none; }
 #um-site-search .search-field { min-width: 100%; }
 
-.site { }
-.site-header { clear: both; width: 100%; }
-.inside { margin: 1% }
-.site-content { width: 98%; margin: 0 auto; }
-.site-footer { clear: both; width: 100%; }
-.site-info { font-size: .8em; padding: 1% }
+body.admin-bar .site-header { margin-top: 32px; }
 
-.site-branding{ font-size: 2em; padding: 1em 0 1.5em 0; text-align: center; font-weight: 300; text-shadow: 1px 1px 2px #666666;}
-.site-title { font-size: 1.5em; text-transform: uppercase; margin-bottom: .5em; }
-.site-description { font-size: .5em; font-weight: 400 }
+#secondary { font-size: .9em; }
 
+@media screen and (max-width: 800px) {
+.micro { font-size: .8em; }
+}
+
+@media screen and (max-width: 540px) {
+.micro { font-size: .7em; }
+}

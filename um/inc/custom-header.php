@@ -15,8 +15,7 @@
  * @package um
  */
 
-/**
- * Setup the WordPress core custom header feature.
+/* Setup the WordPress core custom header feature.
  *
  * @uses um_header_style()
  * @uses um_admin_header_style()
@@ -24,13 +23,20 @@
  *
  * @package um
  */
+ 
 function um_custom_header_setup() {
+
+	if ( um_getoption('umchiw','umt') ) { $umchiW = um_getoption('umchiw','umt'); } else { $umchiW = "1000"; }
+	if ( um_getoption('umchiw','umt') ) { $umchiH = um_getoption('umchih','umt'); } else { $umchiH = "250"; }
+
 	add_theme_support( 'custom-header', apply_filters( 'um_custom_header_args', array(
 		'default-image'          => '',
+		'header-text'            => false,
 		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
-		'flex-height'            => true,
+		'width'                  => $umchiW,
+		'height'                 => $umchiH,
+		'flex-height'            => false,
+		'flex-width'             => true,		
 		'wp-head-callback'       => 'um_header_style',
 		'admin-head-callback'    => 'um_admin_header_style',
 		'admin-preview-callback' => 'um_admin_header_image',
@@ -39,46 +45,38 @@ function um_custom_header_setup() {
 
 add_action( 'after_setup_theme', 'um_custom_header_setup' );
 
+if ( ! function_exists( 'um_header_css' ) ) :
+
+	function um_header_css() {
+
+		if ( um_getoption('umchiw','umt') ) { $umchiW = um_getoption('umchiw','umt'); } else { $umchiW = "1000"; }
+		if ( um_getoption('umchiw','umt') ) { $umchiH = um_getoption('umchih','umt'); } else { $umchiH = "250"; }
+	
+		if ( get_header_image() ) {
+			$style = '<style type="text/css">';
+			$style .= ".um-headimg { min-height: ".$umchiH."px; background: url('".get_header_image()."') top center no-repeat !important }";
+			$style .= '</style>';
+
+		} else {
+			$style ="<!--headimg: NA-->";
+		}
+		return $style;
+	}
+
+endif;
+	
 if ( ! function_exists( 'um_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
  * @see um_custom_header_setup().
  */
-function um_header_style() {
-	$header_text_color = get_header_textcolor();
 
-	// If no custom options for text are set, let's bail
-	// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value
-	if ( HEADER_TEXTCOLOR == $header_text_color ) {
-		return;
+	function um_header_style() {
+		echo um_header_css();
 	}
 
-	// If we get this far, we have custom styles. Let's do this.
-	?>
-	<style type="text/css">
-	<?php
-		// Has the text been hidden?
-		if ( 'blank' == $header_text_color ) :
-	?>
-		.site-title,
-		.site-description {
-			position: absolute;
-			clip: rect(1px, 1px, 1px, 1px);
-		}
-	<?php
-		// If the user has set a custom color for the text use that
-		else :
-	?>
-		.site-title a,
-		.site-description {
-			color: #<?php echo $header_text_color; ?>;
-		}
-	<?php endif; ?>
-	</style>
-	<?php
-}
-endif; // um_header_style
+endif;
 
 if ( ! function_exists( 'um_admin_header_style' ) ) :
 /**
@@ -86,26 +84,10 @@ if ( ! function_exists( 'um_admin_header_style' ) ) :
  *
  * @see um_custom_header_setup().
  */
-function um_admin_header_style() {
-?>
-	<style type="text/css">
-		.appearance_page_custom-header #headimg {
-			border: none;
-		}
-		#headimg h1,
-		#desc {
-		}
-		#headimg h1 {
-		}
-		#headimg h1 a {
-		}
-		#desc {
-		}
-		#headimg img {
-		}
-	</style>
-<?php
-}
+	function um_admin_header_style() {
+		echo um_header_css();
+	}
+	
 endif; // um_admin_header_style
 
 if ( ! function_exists( 'um_admin_header_image' ) ) :
@@ -115,15 +97,8 @@ if ( ! function_exists( 'um_admin_header_image' ) ) :
  * @see um_custom_header_setup().
  */
 function um_admin_header_image() {
-	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
-?>
-	<div id="headimg">
-		<h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-		<div class="displaying-header-text" id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
-		<?php if ( get_header_image() ) : ?>
-		<img src="<?php header_image(); ?>" alt="">
-		<?php endif; ?>
-	</div>
-<?php
+
 }
 endif; // um_admin_header_image
+
+add_action('wp_head','um_header_style');

@@ -7,6 +7,15 @@
  * @package um
  */
 
+ 
+ 
+function um_image_header() {
+	if ( get_header_image() ) {?>style ="background:url('<?php header_image(); ?>') 0 0 no-repeat;width:<?php echo get_custom_header()->width; ?>px;height:<?php echo get_custom_header()->height; ?>px;"<?php  }
+}
+ 
+ 
+ 
+ 
 if ( ! function_exists( 'um_paging_nav' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.

@@ -7,6 +7,7 @@
  * @package um
  */
 
+
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  *
@@ -42,18 +43,20 @@ add_filter( 'body_class', 'um_body_classes' );
  * @param string $sep Optional separator.
  * @return string The filtered title.
  */
-function um_wp_title( $title, $sep ) {
-	if ( is_feed() ) {
-		return $title;
-	}
-	
+function um_wp_title( $title, $sep=":" ) {
+
+	$suf_title = get_bloginfo( 'name', 'display' );
+
+	if ( is_feed() ) { return $suf_title.$title; }
+	if ( is_404() )  { return $suf_title.$title; }
+	if ( is_archive() ) { return $suf_title." $sep Archive".$title; }
+
 	global $page, $paged;
-
-	// Add the blog name
-	$title .= get_bloginfo( 'name', 'display' );
-
-	// Add the blog description for the home/front page.
+	
+	$title = $suf_title.$title;
+	
 	$site_description = get_bloginfo( 'description', 'display' );
+
 	if ( $site_description && ( is_home() || is_front_page() ) ) {
 		$title .= " $sep $site_description";
 	}

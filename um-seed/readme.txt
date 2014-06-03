@@ -1,1 +1,0 @@
-This is um-seed readme.txt. Edit me!
